@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>SEO First pract. Anastasiia</title>
 </head>
 <body>
-    <header>
 
+    <header class="header-container">
+        <div class="logo">
+            <span class="logo-text">CREATE</span>
+            <img src="../img/svg/logo.svg" alt="Logo icon" class="logo-icon">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#case_studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#about_us" class="nav-link">About Us</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contacts" class="nav-link">Contacts</a></li>
+                <li><a href="#talk_to_a_human" class="nav-link btn-talk">Talk to a human</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="mainPart">
-        
-        <img src="../img/corova_i_delpfin.jpg"></img>
-    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Best SEO & Marketing Solutions for You</h1>
+                <div class="hero-buttons">
+                    <button class="analysis-btn">Get a free analysis</button>
+                    <button class="video-btn">
+                        <span class="play-icon">▶</span>
+                        Play video
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../img/hihi_pict/corova_i_delpfin.jpg" 
+                class="hero-img">
+            
+                <video class="hero-video" id="heroVideo" controls playsinline>
+                    <source src="../img/hihi_pict/giff.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <section class="steps-bar">
+            <div class="step-item">
+                <img src="../img/svg/seo_circle.svg" alt="SEO icon" class="icon">
+                <span class="text">SEO Content Strategy</span>
+            </div>
+            <div class="step-item">
+                <img src="../img/svg/seo_roupr.svg" alt="Content icon" class="icon">
+                <span class="text">Content Marketing</span>
+            </div>
+            <div class="step-item">
+                <img src="../img/svg/seo_comp.svg" alt="Social icon" class="icon">
+                <span class="text">Website & Social Media Marketing</span>
+            </div>
+        </section>
+    </main>
+    <script src="../js/video.js"></script>
 </body>
 </html>

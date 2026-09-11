@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1e84a6;
+    color: #ffffff;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    flex-shrink: 0;
+    background-color: #232441;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    height: 24px;
+    width: auto;    
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #7b61ff;
+}
+
+.btn-talk {
+    background-color: #7b61ff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-talk:hover {
+    background-color: #6a4cff;
+    color: #fff;
+}
+
+
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.analysis-btn {
+    background-color: transparent;
+    border: 3px solid #232441;
+    box-shadow: 5px 5px 5px black;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.analysis-btn:hover {
+    background-color: #232441;
+}
+
+.video-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.play-icon {
+    font-size: 15px;
+    background: #232441;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70%;
+    color: #fff;
+}
+
+.hero-image {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img,
+.hero-video {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    object-fit: contain;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.hero-img {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-video {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.hero-image.is-playing .hero-img {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.hero-image.is-playing .hero-video {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.steps-bar {
+    background-color: #232441;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.step-item:last-child {
+    border-right: none;
+}
+
+.step-item .icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.step-item .text {
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+}
